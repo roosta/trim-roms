@@ -1,4 +1,4 @@
-#+TITLE: roms-clean
+#+TITLE: Clean roms
 
 Script targeted at [[https://retropie.org.uk/][RetroPie]] that removes roms that doesn't have scrape data.
 
