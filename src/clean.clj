@@ -3,8 +3,6 @@
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.string :as str]))
 
-(def excludes #{"psx"})
-
 (def cli-options
   [["-d" "--dry-run"]])
 
