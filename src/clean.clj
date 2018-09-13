@@ -33,9 +33,8 @@
                     (if (-> opts :options :dry-run)
                       (println "Going to move" (.getPath game) "-->" (.getPath target))
                       (do
-                        #_(fs/copy game target)
-                        #_(fs/delete game)
-                        (println "Moved" (.getPath game) "-->" (.getPath target))
-                        )))))))))
+                        (fs/copy+ game target)
+                        (fs/delete game)
+                        (println "Moved" (.getPath game) "-->" (.getPath target)))))))))))
       (binding [*out* *err*]
         (println "Argument supplied does not appear to be a valid directory:" (first (:arguments opts)))))))
