@@ -24,9 +24,10 @@
           (println (str "Created backup folder: " backup-path))))
 
 
-      (doseq [game (fs/list-dir sys)]
+      (doseq [game (fs/glob sys "*.zip")]
         (let [game-name (fs/name game)
               image (filter #(str/includes? (fs/name %) game-name) (images game))]
-          (when (empty? image)
+          (when (and (empty? image))
             (when (fs/file? game)
-              (fs/copy game (str backup-path "/" (fs/base-name game))))))))))
+              (println "Going to delete" (.getPath game))
+              #_(fs/copy game (str backup-path "/" (fs/base-name game))))))))))
