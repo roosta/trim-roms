@@ -2,18 +2,18 @@
 
 Script targeted at [[https://retropie.org.uk/][RetroPie]] that trims away roms that doesn't have scrape data.
 
-* Requirements
-  Requires using ~roms~ folder for images and XML files. See [[https://github.com/RetroPie/RetroPie-Setup/wiki/scraper][this]] for more.
-  Requires [[https://clojure.org/][Clojure]]
+*** Requirements
+    Requires using ~roms~ folder for images and XML files. See [[https://github.com/RetroPie/RetroPie-Setup/wiki/scraper][this]] for more.
+    Requires [[https://clojure.org/][Clojure]]
 
-* Running
-  #+BEGIN_SRC shell
-  bin/trim ~/RetroPie/roms
-  #+END_SRC
+*** Running
+    #+BEGIN_SRC shell
+    bin/trim ~/RetroPie/roms
+    #+END_SRC
 
-  This moves from each system roms that doesn't have any scraped data. It is
-  moved to ~../roms-trimmed~ from the main location argument.
+    This moves from each system roms that doesn't have any scraped data. It is
+    moved to ~../roms-trimmed~ from the main location argument.
 
-* Options
-  ~-d, --dry-run~ Outputs each action to ~stdout~ but doesn't do anything
-  physically. Allows for inspection of results before committing to trimming.
+*** Options
+    ~-d, --dry-run~ Outputs each action to ~stdout~ but doesn't do anything
+    physically. Allows for inspection of results before committing to trimming.
