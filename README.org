@@ -3,7 +3,7 @@
 Script targeted at [[https://retropie.org.uk/][RetroPie]] that removes roms that doesn't have scrape data.
 
 * Requirements
-  Requires using ~rom~ folder for images and XML files. See [[https://github.com/RetroPie/RetroPie-Setup/wiki/scraper][this]] for more.
+  Requires using ~roms~ folder for images and XML files. See [[https://github.com/RetroPie/RetroPie-Setup/wiki/scraper][this]] for more.
   Requires [[https://clojure.org/][Clojure]]
 
 * Running
@@ -14,7 +14,6 @@ Script targeted at [[https://retropie.org.uk/][RetroPie]] that removes roms that
   This removes from each system roms that doesn't have any scraped data. The
   script doesn't actually delete anything, it just moves it to a backup location
   so nothing is lost. The location is ~../roms-cleaned~ from the ~roms~ argument.
-
 
 * Options
   ~-d, --dry-run~ Outputs each action to ~stdout~ but doesn't do anything
