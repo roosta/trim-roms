@@ -1,4 +1,4 @@
-(ns clean
+(ns trim
   (:require [me.raynes.fs :as fs]
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.string :as str]))
@@ -21,7 +21,7 @@
     (if (fs/directory? base)
       (doseq [sys (fs/list-dir base)]
 
-        (let [backup-path (str parent "/roms-cleaned/" (fs/name sys))]
+        (let [backup-path (str parent "/roms-trimmed/" (fs/name sys))]
           (doseq [game (fs/glob sys "*.zip")]
             (let [game-name (fs/name game)
                   image (filter #(str/includes? (fs/name %) game-name) (images game))]

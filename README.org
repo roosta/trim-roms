@@ -1,6 +1,6 @@
-#+TITLE: Clean roms
+#+TITLE: Trim roms
 
-Script targeted at [[https://retropie.org.uk/][RetroPie]] that removes roms that doesn't have scrape data.
+Script targeted at [[https://retropie.org.uk/][RetroPie]] that trims away roms that doesn't have scrape data.
 
 * Requirements
   Requires using ~roms~ folder for images and XML files. See [[https://github.com/RetroPie/RetroPie-Setup/wiki/scraper][this]] for more.
@@ -8,13 +8,12 @@ Script targeted at [[https://retropie.org.uk/][RetroPie]] that removes roms that
 
 * Running
   #+BEGIN_SRC shell
-  clj -m clean ~/retropie/roms
+  bin/trim ~/RetroPie/roms
   #+END_SRC
 
-  This removes from each system roms that doesn't have any scraped data. The
-  script doesn't actually delete anything, it just moves it to a backup location
-  so nothing is lost. The location is ~../roms-cleaned~ from the ~roms~ argument.
+  This moves from each system roms that doesn't have any scraped data. It is
+  moved to ~../roms-trimmed~ from the main location argument.
 
 * Options
   ~-d, --dry-run~ Outputs each action to ~stdout~ but doesn't do anything
-  physically. Allows for inspection of results before committing to cleaning.
+  physically. Allows for inspection of results before committing to trimming.
